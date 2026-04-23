@@ -54,3 +54,12 @@ public:
         previos = current;
         current = current->next;
     }
+
+    nodeBaru->next = current;
+    previos->next = nodeBaru;
+    }
+
+    bool listEmpty()
+    {
+        return(START ==NULL );
+    }

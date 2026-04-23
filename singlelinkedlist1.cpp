@@ -35,3 +35,22 @@ public:
                 cout << "\nDuplikasi noMhs tidak dijanjikan\n";
                 return;
             }
+
+            nodeBaru->next = START;
+            START = nodeBaru;
+            return;
+        }
+        
+        Node *previos = START;
+        Node *current = START;
+
+        while (current != NULL && nim > current->noMhs)
+    {
+        if (nim == current->noMhs)
+        {
+            cout << "\nDuplikasi noMhs tidak dijanjikan\n";
+            return;
+        }
+        previos = current;
+        current = current->next;
+    }
